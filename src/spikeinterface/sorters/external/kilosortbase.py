@@ -200,7 +200,7 @@ class KilosortBase:
                     #!/bin/bash
                     {matlab_shell_str}
                     cd "{sorter_output_folder}"
-                    matlab -nosplash -nodisplay -r "{cls.sorter_name}_master('{sorter_output_folder}', '{sorter_path}')"
+                    /opt/ebsofts/MATLAB/2021a/bin/matlab -nosplash -nodisplay -r "{cls.sorter_name}_master('{sorter_output_folder}', '{sorter_path}')"
                 """
         shell_script = ShellScript(
             shell_cmd,
