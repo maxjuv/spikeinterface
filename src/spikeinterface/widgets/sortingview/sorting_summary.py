@@ -47,6 +47,11 @@ class SortingSummaryPlotter(SortingviewPlotter):
                         unit_id1=u1, unit_id2=u2, similarity=dp.similarity["similarity"][i1, i2].astype("float32")
                     )
                 )
+                
+        templatesimilarity_plotter = TemplateSimilarityPlotter()
+        v_unit_locations = templatesimilarity_plotter.do_plot(
+        dp.similarity, generate_url=False, display=False, backend="sortingview"
+        )
 
         # unit ids
         v_units_table = generate_unit_table_view(
